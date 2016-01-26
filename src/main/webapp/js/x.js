@@ -18,6 +18,13 @@ angular.module('myApp')
         $scope.submitForm = function() {
             alert("it works!")
         };
+
+        $scope.submit = function() {
+            if ($scope.person.name) {
+                $scope.people.push({name: $scope.person.name});
+                $scope.person.name = '';
+            }
+        };
     });
 
 angular.module('myApp')
@@ -25,4 +32,15 @@ angular.module('myApp')
         $scope.decrement = function() {
             $scope.count = $scope.count - 1;
         };
+    });
+
+angular.module('myApp')
+    .controller('CityController', function($scope) {
+        $scope.cities = [
+            {name: 'Seattle'},
+            {name: 'San Francisco'},
+            {name: 'Chicago'},
+            {name: 'New York'},
+            {name: 'Boston'}
+        ];
     });
