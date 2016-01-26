@@ -19,3 +19,10 @@ angular.module('myApp')
             alert("it works!")
         };
     });
+
+angular.module('myApp')
+    .controller('CounterController', function($scope) {
+        $scope.decrement = function() {
+            $scope.count = $scope.count - 1;
+        };
+    });
