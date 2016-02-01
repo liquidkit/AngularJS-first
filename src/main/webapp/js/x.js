@@ -19,6 +19,12 @@ angular.module('myApp')
             alert("it works!")
         };
 
+        $scope.person = {
+            name: null
+        };
+
+        $scope.people = [];
+
         $scope.submit = function() {
             if ($scope.person.name) {
                 $scope.people.push({name: $scope.person.name});
@@ -43,4 +49,11 @@ angular.module('myApp')
             {name: 'New York'},
             {name: 'Boston'}
         ];
+    });
+
+angular.module("myApp")
+    .controller("LotteryController", function($scope) {
+        $scope.generateNumber = function() {
+            return Math.floor((Math.random()*10)+1);
+        };
     });
