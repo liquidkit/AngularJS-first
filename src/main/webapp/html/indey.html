@@ -16,8 +16,23 @@
                 Inside Div Three: {{ aThirdProperty }}
                 <div ng-controller="SecondController">
                     Inside Div Four: {{ aThirdProperty }}
+                    <div></div>
+                    Outside myDirective: {{ myProperty }}
+                    <div my-directive ng-init="myProperty = 'wow, this is cool'">
+                        Inside myDirective: {{ myProperty }}
+                    </div>
                 </div>
             </div>
         </div>
+        <div>====</div>
+
+        <div ng-controller="MainController">
+            Outside myDirective: {{ myProperty }}
+            <div my-directive ng-init="myProperty = 'wow, this is cool'">
+                Inside myDirective: {{ myProperty }}
+            </div>
+        </div>
+        <div>====</div>
+
     </body>
 </html>
