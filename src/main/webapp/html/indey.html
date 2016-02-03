@@ -34,5 +34,13 @@
         </div>
         <div>====</div>
 
+        <div ng-init="myProperty = 'wow, this is cool'"></div>
+        Surrounding scope: {{ myProperty }}
+        <div my-inherit-scope-directive="SomeController">
+            Inside an directive with inherited scope: {{ myProperty }}
+        </div>
+        <div my-directive>
+            Inside myDirective, isolate scope: {{ myProperty }}
+        </div>
     </body>
 </html>
